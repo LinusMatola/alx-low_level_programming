@@ -1,20 +1,18 @@
+#include "main.h"
 
-#include "holberton.h"
 /**
- * main - Entry point
+ * print_alphabet - prints the english alphabet from a-z.
  *
- * Return: Always 0 (Success)
+ * Return: Nothing.
  */
-int main(void)
+void print_alphabet(void)
 {
-	char *sh = "Holberton";
+	char c = 'a';
 
-	while (*sh)
+	while (c <= 'z')
 	{
-		_putchar(*sh);
-		sh++;
+		_putchar(c);
+		c++;
 	}
-	_putchar('\n');
-
-	return (0);
+	_putchar ('\n');
 }
