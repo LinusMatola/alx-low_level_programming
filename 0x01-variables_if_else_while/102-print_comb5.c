@@ -1,52 +1,40 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 
-/* betty style doc for function main goes there */
 /**
-* main - Entry point
-*
-* Return: Always 0 (Success)
+* main - program that prints all possible combinations of
+* two two-digit
+* The numbers should range from 0 to 99
+* Numbers must be separated by ,followed by a space
+* All numbers should be printed with two digits. 1 should be printed as 01
+* Return: 0
 */
+
 int main(void)
 {
-	int i, j, k, l;
+	int n1 = 48;
+	int a = 0;
+	int b;
+	int com = 44;
 
-	i = j = k = 48; l = 49;
-	while  ((i < 58))
+	while (a <= 99)
 	{
-		putchar(i); putchar(j); putchar(32); putchar(k); putchar(l);
-		if ((i == 57) && (j == 56) && (k == 57) && (l == 57))
+		b = a + 1;
+		while (b <= 99)
 		{
-			putchar('\n'); i++;
+			putchar((a / 10) + n1);
+			putchar((a % 10) + n1);
+			putchar(32);
+			putchar((b / 10) + n1);
+			putchar((b % 10) + n1);
+			if (a != 98 || b != 99)
+			{
+				putchar(com);
+				putchar(32);
+			}
+			b += 1;
 		}
-		else
-		{
-			putchar(44); putchar(32);
-			if ((k == 57) && (l == 57))
-			{
-				if (j < 56)
-				{
-					l = ++j + 1; k = i;
-				}
-				else if (j == 56)
-				{
-					j++; k = i + 1; l = 48;
-				}
-				else if (j == 57)
-				{
-					j = 48; l = 49; k = ++i;
-				}
-			}
-			else if (l < 57)
-			{
-				l++;
-			}
-			else
-			{
-				l = 48; k++;
-			}
-		}
+		a += 1;
 	}
+	putchar('\n');
 	return (0);
 }
