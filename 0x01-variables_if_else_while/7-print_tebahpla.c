@@ -1,34 +1,21 @@
-#include "main.h"
+#include <stdio.h>
+
 
 /**
- * print_diagonal - entry point
- *
- * Description: Prints diagonals
- *@n: number of spaces
- * Return: void
- */
-
-void print_diagonal(int n)
+* main - Entry point
+*
+* Return: Always 0 (Success)
+*/
+int main(void)
 {
-	int row, num_lines;
+	char l;
 
-	if (n <= 0)
+	l = 'z';
+	while (l >= 'a')
 	{
-		_putchar('\n');
+		putchar(l);
+		l--;
 	}
-	else
-	{
-		for (row = 1; row <= n; row++)
-		{
-			if (row > 1)
-			{
-				for (num_lines = 1; num_lines <= row - 1; num_lines++)
-				{
-				_putchar(' ');
-				}
-			}
-			_putchar('\\');
-			_putchar('\n');
-		}
-	}
+	putchar('\n');
+	return (0);
 }
