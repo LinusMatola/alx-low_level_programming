@@ -1,5 +1,5 @@
 CC=gcc
 all: build
 
-build: main.c holberton.c
-		$(CC) main.c holberton.c -o holberton
+build: main.c school.c
+		$(CC) main.c school.c -o holberton
